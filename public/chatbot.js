@@ -6,7 +6,7 @@
  const url = process.env.BASE_URL
   // Create toggle button
  const button = document.createElement('img');
-  button.src = `${url}/icons/Chatbot.svg`; // 🔁 Replace with your icon URL
+  button.src = `https://chatpitol.vercel.app/icons/Chatbot.svg`; // 🔁 Replace with your icon URL
   button.alt = 'Chat';
   button.style = `
     position: fixed;
@@ -25,7 +25,7 @@
   `;
 
   const iframe = document.createElement('iframe');
-  iframe.src = `${url}/${chatbotId}`;
+  iframe.src = `https://chatpitol.vercel.app/${chatbotId}`;
   iframe.style = `
     position: fixed;
     bottom: 80px;
