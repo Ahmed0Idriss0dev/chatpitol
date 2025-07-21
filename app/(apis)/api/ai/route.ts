@@ -8,7 +8,7 @@ export async function POST(req:NextRequest){
     const {prompt , system , messages} = await req.json();   
     const customPrompt = `${system} make the message short and no markdown`
     const { text } = await generateText({
-      model: google("models/gemini-2.0-flash-exp"),
+      model: google("gemini-2.0-flash"),
       prompt: prompt ,
       system:customPrompt ,
     })
