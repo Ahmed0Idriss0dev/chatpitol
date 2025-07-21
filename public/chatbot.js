@@ -3,10 +3,10 @@
   const chatbotId = scriptTag.getAttribute('chatbot-id');
   const type = scriptTag.getAttribute('type-service');
 
-
+ const url = process.env.BASE_URL
   // Create toggle button
  const button = document.createElement('img');
-  button.src = 'http://localhost:3000/icons/Chatbot.svg'; // 🔁 Replace with your icon URL
+  button.src = `${url}/icons/Chatbot.svg`; // 🔁 Replace with your icon URL
   button.alt = 'Chat';
   button.style = `
     position: fixed;
@@ -25,7 +25,7 @@
   `;
 
   const iframe = document.createElement('iframe');
-  iframe.src = `http://localhost:3000/chatbot/${chatbotId}`;
+  iframe.src = `${url}/${chatbotId}`;
   iframe.style = `
     position: fixed;
     bottom: 80px;
