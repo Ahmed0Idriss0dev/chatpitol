@@ -10,7 +10,7 @@ export default function RootLayout({
        <Nav/>
        {children}
           
-  <script src="http://localhost:3000/chatbot.js" chatbot-id="687e2c8200273cd44cab "></script>  
+  <script src="https://chatpitol.vercel.app/chatbot.js" chatbot-id="687e2c8200273cd44cab "></script>  
    </main>
   );
 }
