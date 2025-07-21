@@ -10,17 +10,45 @@
   --color-foreground: var(--foreground);
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
-}
+  --color-chatbot-50: #fff6ed;
+--color-chatbot-100: #feebd6;
+--color-chatbot-200: #fcd4ac;
+--color-chatbot-300: #f9b578;
+--color-chatbot-400: #f68c41;
+--color-chatbot-500: #f36f21;
+--color-chatbot-600: #e45212;
+--color-chatbot-700: #bd3c11;
+--color-chatbot-800: #963116;
+--color-chatbot-900: #792a15;
+--color-chatbot-950: #411309;
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+
+
+
+}
+@layer components{
+  .whitespace{
+    @apply px-8 sm:px-12 
+    
   }
+  .button{
+    @apply w-36 h-11 rounded-2xl cursor-pointer
+  }
+  .title{
+    @apply text-transparent bg-clip-text bg-linear-60 from-neutral-950 to-neutral-500
+  }
+  .input{
+    @apply w-full h-12 px-3 outline-1 outline-amber-100/0 duration-150  focus:outline-1 focus:outline-chatbot-500  rounded-2xl border border-neutral-200
+  }
+  .label{
+    @apply flex flex-col gap-2
+  }
+}
+::-webkit-scrollbar{
+  width: 0;
+  opacity: 0;
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  @apply bg-white text-neutral-950
 }
