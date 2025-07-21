@@ -1,3 +1,4 @@
+export const dynamicParams = true // true | false,
 import { GetbydocId } from '@/client/curd'
 import Room from '@/components/section/Room'
 import Hello from '@/components/ui/Hello'
@@ -7,8 +8,12 @@ import { Chatbotdata } from '@/types'
 import Image from 'next/image'
 import React from 'react'
 
-const page = async ({ params }: { params: { id: string } }) => {
-  const {id} =params
+const page = async ({
+  params,
+}: {
+  params: Promise<{ id: string }>
+}) => {
+  const {id} =await  params
   const data:Chatbotdata = await GetbydocId(id)
   console.log(data)
   return (
